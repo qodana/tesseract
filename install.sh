@@ -25,10 +25,10 @@ install_debian_ubuntu() {
     echo "Installing dependencies for Debian/Ubuntu..."
 
     # Update package lists
-    apt-get update
+    sudo apt-get update
 
     # Install build essentials and CMake
-    apt-get install -y \
+    sudo apt-get install -y \
         build-essential \
         cmake \
         pkg-config \
@@ -37,26 +37,26 @@ install_debian_ubuntu() {
         ca-certificates
 
     # Install Leptonica and its dependencies
-    apt-get install -y \
+    sudo apt-get install -y \
         libleptonica-dev \
         zlib1g-dev \
         libpng-dev \
         libjpeg-dev
 
     # Install optional dependencies (TIFF, archive, curl)
-    apt-get install -y \
+    sudo apt-get install -y \
         libtiff-dev \
         libarchive-dev \
         libcurl4-openssl-dev
 
     # Install training tools dependencies
-    apt-get install -y \
+    sudo apt-get install -y \
         libpango1.0-dev \
         libcairo2-dev \
         libicu-dev
 
     # Clean up
-    apt-get clean
+    sudo apt-get clean
     rm -rf /var/lib/apt/lists/*
 
     echo "Dependencies installed successfully on Debian/Ubuntu!"
