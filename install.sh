@@ -57,7 +57,7 @@ install_debian_ubuntu() {
 
     # Clean up
     sudo apt-get clean
-    rm -rf /var/lib/apt/lists/*
+    sudo rm -rf /var/lib/apt/lists/*
 
     echo "Dependencies installed successfully on Debian/Ubuntu!"
 }
